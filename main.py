@@ -6,12 +6,13 @@ from playsound import playsound
 global time_text 
 global outputString
 global t
-t = 10
+t = 3600
 
 def Refresh():
     global t, mins, secs
     if (t == 0):
         playsound("content/omg.mp3")
+        t = 3600
     t -= 1
     mins, secs = divmod(t, 60)
     outputString = '{:02d}:{:02d}'.format(mins, secs)
